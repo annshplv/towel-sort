@@ -1,11 +1,12 @@
 
 // You should implement your task here.
 
-module.exports = function towelSort (matrix) {
-    for (let j = 0; j < matrix[i].length; j++) {
-        let columnInd = i % 2 === 0
-        ? j
-        : (matrix[i].length - j - 1);
+module.exports = function towelSort (matrix =[]) {
+    for (let i = 0; i < matrix.length; i++) {
+        if (i % 2 !== 0) {
+            matrix[i].reverse();
+        }
     }
-  return [matrix[i][columnInd]];
+    matrix = matrix.flat();
+    return matrix;
 }
